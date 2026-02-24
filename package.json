@@ -1,0 +1,29 @@
+{
+  "name": "signin-sentinel",
+  "version": "0.5.0",
+  "private": true,
+  "description": "SignInSentinel - Electron app for fetching Microsoft Entra sign-in logs via Graph API",
+  "license": "MIT",
+  "workspaces": [
+    "packages/shared",
+    "packages/backend",
+    "packages/frontend"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=packages/backend",
+    "dev:all": "concurrently \"npm run dev:frontend\" \"npm run dev\"",
+    "dev:frontend": "npm run dev --workspace=packages/frontend",
+    "build": "npm run build --workspaces",
+    "build:all": "node scripts/sync-version.js && npm run build --workspaces && npm run dist --workspace=packages/backend && node scripts/post-dist.js",
+    "build:shared": "npm run build --workspace=packages/shared",
+    "build:backend": "npm run build --workspace=packages/backend",
+    "build:frontend": "npm run build --workspace=packages/frontend",
+    "lint": "eslint packages/*/src/**/*.{ts,tsx}"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
