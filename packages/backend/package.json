@@ -1,6 +1,6 @@
 {
   "name": "@signin-sentinel/backend",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "description": "SignInSentinel - Electron backend",
   "author": "Biztech",

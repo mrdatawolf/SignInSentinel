@@ -37,3 +37,4 @@ npm-debug.log*
 
 # Vite
 packages/frontend/.vite/
+package-lock.json

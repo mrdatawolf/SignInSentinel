@@ -1,6 +1,6 @@
 {
   "name": "signin-sentinel",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "description": "SignInSentinel - Electron app for fetching Microsoft Entra sign-in logs via Graph API",
   "license": "MIT",

@@ -22,6 +22,7 @@ async function createWindow() {
       nodeIntegration: false,
     },
     title: "SignInSentinel",
+    icon: path.join(__dirname, "..", "assets", "icon.ico"),
   });
 
   // In production, serve the built React app
